@@ -1,0 +1,92 @@
+/* إعدادات عامة للصفحة */
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74EBD5 0%, #ACB6E5 100%);
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* تنسيق الأسماء */
+#nameContainer {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeInText 1.5s ease forwards;
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* تنسيق الأزرار */
+.btn {
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.4s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: linear-gradient(45deg, #FF6B6B, #FFB13D);
+}
+
+/* تنسيق المعلومات */
+.info, .work-info {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    text-align: right;
+    border-left: 5px solid #FF6B6B;
+    animation: fadeInSlide 1s ease forwards;
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* تنسيق الصور */
+.gallery img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
